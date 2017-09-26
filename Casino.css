@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper{
+    width: 850px;
+    height: 500px;
+}
+
+/*main___________________________________________________________________________*/
+#main{
+    width: 600px;
+    height: 500px;
+    background-color: Gainsboro;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#header{
+    display: block;
+    margin-top: 40px;
+    margin-left: 159px;
+    width: 270px;
+    padding-left: 15px;
+    font-size: 70px;
+    height: 84px;
+    background-color: maroon;
+    color: white;
+    font-family: "Lucida Console";
+}
+
+/*winlose_________________________________________________________________________*/
+
+#winlose{
+    height: 140px;
+    width: auto;
+    margin-top: 42px;
+    padding-left: 94px;
+
+}
+
+
+#winbox{
+    display: inline-block;
+    height: 100px;
+    width: 150px;
+    border-color: black;
+
+    border-style: dotted;
+    border-width: 10px;
+    border-color: grey;
+    text-align: center;
+    vertical-align: top;
+}
+#win{
+    font-size: 58px;
+    padding-top: 12px;
+    width: auto;
+    height: 87px;
+    background-color: DarkGrey;
+}
+#losebox{
+    vertical-align: top;
+    display: inline-block;
+    height: 100px;
+    width: 150px;
+    border-color: black;
+
+    border-style: dotted;
+    border-width: 10px;
+    border-color: grey;
+    margin-left: 70px;
+    text-align: center;
+}
+#lose{
+    font-size: 50px;
+    padding-top: 16px;
+    width: auto;
+    height: 83px;
+    background-color: DarkGrey;
+}
+/*/main___________________________________________________________________________*/
+/*sidebar_________________________________________________________________________*/
+#sidebar{
+    width: 200px;
+    height: 400px;
+    margin-left: 20px;
+    margin-top: 50px;
+    display: inline-block;
+    vertical-align: top;
+    background: maroon;
+    text-align: center;
+}
+#cash{
+
+   border: none;
+   color: transparent;
+   text-shadow: 0 0 0 black;
+   text-align: center;
+
+    &:focus {
+    outline: none;
+}
+}
+
+
+#sidebar h1{
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/*input::-webkit-outer-spin-button,*/
+#bank input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+     margin: 0; / <-- Apparently some margin are still there even though it's hidden /
+}
+
+
+/*/sidebar_________________________________________________________________________*/

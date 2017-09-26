@@ -1,0 +1,76 @@
+<!Doctype HTML>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>Casino</title>
+        <link rel="stylesheet" href="Casino.css">
+        <script src= 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+
+                $(".makebet").click(function(event){
+                    event.preventDefault();
+                    var betVal = $("#bet").val();
+                    var cash = $("#cash").val();
+                    if (cash - betVal < 0){
+                        alert ("You Don't Have Enough Coins!");
+                    }
+                    else $("#cash").val(cash - betVal);
+                })
+                $(".makebet").click(function(){
+                    var winNum = Math.floor(Math.random() * 100);
+                        $("#winningbox").val(winNum);
+                    var yourNum = Math.floor(Math.random() * 100);
+                        $("#yourbox").val(yourNum);
+                    function referee(){
+                        if(winNum == yourNum) {
+                            referee = true;
+                            return;
+                        }
+                        else if(winNum !== yourNum) {
+                            referee = false;
+                        }
+                    }
+                })
+
+            });
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="main">
+                <h1 id=header>Casino!!</h1>
+                <div id="winlose">
+                    <div id= "winbox">
+                        <h1 id="win">WIN!</h1>
+                    </div>
+                    <div id= "losebox">
+                        <h1 id="lose">LOSE!</h1>
+                    </div>
+                </div>
+
+                <div class= "Numbers">
+                    <input type="number" id="yourbox" value=""  onkeydown="return false">
+                    <input type="number" id="winningbox" value=""  onkeydown="return false">
+
+                </div>
+            </div>
+        <div id= "sidebar">
+                <h1>BANK</h1>
+                <div id="bank">
+                    <input type="number" id="cash" value="100" min="0" onkeydown="return false">
+                </div>
+                <div>
+                    <h3>How Many Coins Would You Like to Bet?</h3>
+
+
+                    <form>
+                        <input type="number" id="bet" value="1" min="1" max="10">
+                        <button class="makebet">Make Bet</button>
+                    </form>
+
+                </div>
+
+        </div>
+    </body>
+</html>
